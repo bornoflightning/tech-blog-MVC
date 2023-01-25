@@ -1,0 +1,16 @@
+:root {
+    --celeste: #A4F4F2;
+    --tiffany-blue: #17BEBB;
+    --raisin-black: #2E282A;
+}
+
+body {
+    background-color: var(--celeste);
+
+}
+
+header {
+    background-color: var(--raisin-black);
+    height: 15vh;
+    border-radius: 10px;
+}

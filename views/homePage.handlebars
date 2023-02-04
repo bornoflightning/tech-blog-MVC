@@ -1,0 +1,11 @@
+ {{#each posts as |post|}}
+    <div class="card">
+        <div class="cardHeader">
+            <h3 class="cardTitle" ><a href="/api/post/{{post.id}}"></a> {{post.title}}</a></h3>
+            <p>-{{post.user.username}} posted on {{format_date post.date_created}}</p>
+        </div>
+        <div class="cardStuff">
+            <p class="cardText">{{post.decription}}</p>
+        </div>
+    </div>
+{{/each}}

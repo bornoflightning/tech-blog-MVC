@@ -1,0 +1,52 @@
+<div>
+    <div>Welcome {{username}}</div>
+
+    <h2>My post history</h2>
+
+    <div class="allPosts">
+        {{#each posts as |post|}}
+        <div class="card">
+            <div class="cardHeader">
+                <h3 class="cardTitle" ><a href="/api/post/{{post.id}}"></a> {{post.title}}</a></h3>
+                <p>-{{post.user.username}} posted on {{format_date post.date_created}}</p>
+            </div>
+            <div class="cardStuff">
+                <p class="cardText">{{post.decription}}</p>
+            </div>
+        </div>
+        <div>
+            <button class=" button deleteButton" data-id=" {{post.id}}">Delete</button>
+        </div>
+        {{/each}}
+    </div>
+    {{if}}
+    <div>
+        <h2>Create New Post</h2>
+        <form class="newPostForm">
+            <div>
+                <label for="title">title</label>
+                <input type="text" name="title" id="title" class="from">
+            </div>
+            <div>
+                <label for="description">What's on your mind?</label>
+                <input type="text" name="description" class="form">
+            </div>
+            <div>
+                <button type="submit" id="postButton" class="button">Post</button>
+            </div>
+
+        </form>
+</div>
+
+
+<script src="/javascript/dashboard.js"></script>
+
+
+
+
+
+
+
+
+
+</div>

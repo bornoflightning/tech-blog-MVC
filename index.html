@@ -9,8 +9,32 @@
 </head>
 <body>
     <header>
+        <div>
+            <button class="button">Home</button>
+            <button class="button">Dashboard</button>
+            {{#if logged_in}}
+            <button class="button">Logout</button>
+            {{else}}
+            <button class="button">Logout</button>
+            {{/if}}
+            <h1>The Tech blog</h1>
+        </div>
 
     </header>
+
+    <main class="main">
+
+        {{{body}}}
+
+        
+       
+    
+   
+
+    </main>
     
 </body>
 </html>
+
+
+

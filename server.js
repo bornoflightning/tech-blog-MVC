@@ -42,9 +42,9 @@ app.set('view engine', 'handlebars');
 
 // boiler plate for express, 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 // handling static files with images and such
-app.use(express.static(path.join(__dirname, "/stylesheet")));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 

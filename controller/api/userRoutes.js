@@ -4,8 +4,9 @@ const authorized = require('../../utils/authorized');
 
 //this route handles the rendering of loggin info
 router.get('/login', async (req, res) => {
+    
     try {
-        res.render('/login')
+        res.render('login');
     } catch (error) {
         console.log("could not load that route")
         res.status(500).json(error)
@@ -53,12 +54,12 @@ router.post("/login", async (req, res) => {
 
 //This route handles the sign up function
 router.get('/signup', async (req, res) => {
-    res.redirect('/signup')
-    // try {
-        
-    // } catch (error) {
-    //     res.status(500).json(error)
-    // }
+    
+    try {
+        res.redirect('signup');
+    } catch (error) {
+        res.status(500).json(error)
+    }
 });
 
 // this route creates a new user/signup

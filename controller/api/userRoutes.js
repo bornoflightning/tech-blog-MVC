@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
 router.get('/signup', async (req, res) => {
     
     try {
-        res.redirect('signup');
+        res.render('signup');
     } catch (error) {
         res.status(500).json(error)
     }
